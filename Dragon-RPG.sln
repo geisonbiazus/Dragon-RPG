@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dragon-RPG", "Assembly-CSharp-firstpass.csproj", "{44DD8B8C-64E2-F9A2-2B18-1055F22368B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dragon-RPG", "Assembly-CSharp.csproj", "{C72611FD-9BF4-73F5-A5B6-D56DAC756113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dragon-RPG", "Assembly-CSharp-Editor-firstpass.csproj", "{011CFA49-3A19-2BA4-A739-F74B5D859603}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44DD8B8C-64E2-F9A2-2B18-1055F22368B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44DD8B8C-64E2-F9A2-2B18-1055F22368B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44DD8B8C-64E2-F9A2-2B18-1055F22368B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44DD8B8C-64E2-F9A2-2B18-1055F22368B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C72611FD-9BF4-73F5-A5B6-D56DAC756113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C72611FD-9BF4-73F5-A5B6-D56DAC756113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C72611FD-9BF4-73F5-A5B6-D56DAC756113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C72611FD-9BF4-73F5-A5B6-D56DAC756113}.Release|Any CPU.Build.0 = Release|Any CPU
+		{011CFA49-3A19-2BA4-A739-F74B5D859603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{011CFA49-3A19-2BA4-A739-F74B5D859603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{011CFA49-3A19-2BA4-A739-F74B5D859603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{011CFA49-3A19-2BA4-A739-F74B5D859603}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
