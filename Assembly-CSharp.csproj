@@ -49,6 +49,7 @@
      <Compile Include="Assets\CameraFollow.cs" />
      <Compile Include="Assets\CameraRaycaster.cs" />
      <Compile Include="Assets\Cursor.cs" />
+     <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\Utility.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
