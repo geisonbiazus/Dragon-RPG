@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     ThirdPersonCharacter m_Character;   // A reference to the ThirdPersonCharacter on the object
     CameraRaycaster cameraRaycaster;
     Vector3 currentClickTarget;
+
+    bool isInDirectMode = false; // TODO consider making static later
             
     private void Start()
     {
@@ -19,15 +21,35 @@ public class PlayerMovement : MonoBehaviour
         currentClickTarget = transform.position;
     }
 
-    // TODO fix issue with click to move and WSAD conflicting and increasing speed 
-
     // Fixed update is called in sync with physics
     private void FixedUpdate()
     {
+        // G for gamepad. TODO add to menu
+        if (Input.GetKeyDown(KeyCode.G)) {
+            isInDirectMode = !isInDirectMode;
+        }
+
+        if (isInDirectMode) {
+            ProcessDirectMovement();
+        } else {
+            ProcessMouseMovement();
+        }        
+    }
+
+    private void ProcessDirectMovement() {
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+
+        // calculate camera relative direction to move:
+        Vector3 m_CamForward = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
+        Vector3 m_Move = v * m_CamForward + h * Camera.main.transform.right;
+
+        m_Character.Move(m_Move, false, false);
+    }
+
+    private void ProcessMouseMovement() {
         if (Input.GetMouseButton(0))
         {
-            print("Cursor raycast hit" + cameraRaycaster.hit.collider.gameObject.name.ToString());
-
             switch (cameraRaycaster.layerHit) {
                 case Layer.Walkable:
                     currentClickTarget = cameraRaycaster.hit.point;  // So not set in default case
