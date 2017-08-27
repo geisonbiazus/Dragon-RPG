@@ -19,12 +19,12 @@ public class CursorAffordance : MonoBehaviour {
 	CameraRaycaster raycaster;
 
 	// Use this for initialization
-	void Start () {
+	void Start() {
 		raycaster = GetComponent<CameraRaycaster>();
+		raycaster.layerChangeObservers += OnLayerChanged;
 	}
 	
-	// Update is called once per frame
-	void LateUpdate () {		
+	void OnLayerChanged() {		
 		Texture2D cursor;
 		switch (raycaster.currentLayerHit)
 		{
